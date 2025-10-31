@@ -6,7 +6,7 @@ authors = [
     "Kate Ward <kate@dariox.club>",
     "ToastXC <contact@toastxc.xyz>"
 ]
-description = "Installer for Open Fortress"
+description = "Open-Source Installer for Sourcemods"
 repository = "https://github.com/ktwrd/beans-rs"
 license = "GPL-3.0"
 
