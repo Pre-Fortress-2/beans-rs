@@ -6,6 +6,6 @@
   },
   "remote": {
     "base_url": "https://dl.prefortress.com/beans",
-    "versions_url": "https://dl.prefortress.com/versions.json"
+    "versions_url": "https://dl.prefortress.com/beans/versions.json"
   }
 }
