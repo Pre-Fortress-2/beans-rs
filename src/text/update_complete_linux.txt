@@ -5,6 +5,4 @@ Update complete! Make sure that the following is done;
   3. Launch $MOD_NAME_STYLIZED
 
 -- Important --
-Make sure that Proton Experimental is enabled for Source SDK Base 2013 Multiplayer!
-
 Use the "previous2021" branch for Source SDK Base 2013 Multiplayer
