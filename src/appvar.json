@@ -5,7 +5,7 @@
     "name_stylized": "Pre-Fortress 2"
   },
   "remote": {
-    "base_url": "https://dl.prefortress.com/beans",
+    "base_url": "https://dl.prefortress.com/beans/",
     "versions_url": "https://dl.prefortress.com/beans/versions.json"
   }
 }
