@@ -52,10 +52,10 @@ jobs:
             libfltk1.3-dev \
             libssl-dev
 
-      - uses: actions-rs/toolchain@v1
+      - uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: nightly-2025-01-10
-          target: ${{ matrix.target }}
+          targets: ${{ matrix.target }}
 
       - uses: actions-rs/cargo@v1
         with:
