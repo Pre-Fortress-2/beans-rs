@@ -1,13 +1,14 @@
 [package]
-name = "beans-rs"
+name = "wings"
 version = "1.7.3"
 edition = "2021"
 authors = [
     "Kate Ward <kate@dariox.club>",
-    "ToastXC <contact@toastxc.xyz>"
+    "ToastXC <contact@toastxc.xyz>",
+    "Sour Dani <dani@prefortress.com>"
 ]
 description = "Open-Source Installer for Sourcemods"
-repository = "https://github.com/ktwrd/beans-rs"
+repository = "https://github.com/Pre-Fortress-2/wings"
 license = "GPL-3.0"
 
 [dependencies]

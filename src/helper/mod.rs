@@ -407,7 +407,7 @@ pub fn is_game_running(mod_directory: String) -> Option<sysinfo::Pid>
                     if let Some(proc_name_str) = proc.name().to_str()
                     {
                         let proc_name = proc_name_str.to_string().to_lowercase();
-                        if proc_name != *"beans" && proc_name != *"beans-rs"
+                        if proc_name != *"beans" && proc_name != *"beans-rs" && proc_name != *"wings" 
                         {
                             return true;
                         }
@@ -642,7 +642,7 @@ pub fn get_tmp_dir() -> String
     }
     else if is_steamdeck()
     {
-        trace!("[helper::get_tmp_dir] Detected that we are running on a steam deck. Using ~/.tmp/beans-rs");
+        trace!("[helper::get_tmp_dir] Detected that we are running on a steam deck. Using ~/.tmp/wings");
         match simple_home_dir::home_dir()
         {
             Some(v) => match v.to_str()
@@ -683,7 +683,7 @@ pub fn get_tmp_dir() -> String
             );
         }
     }
-    dir = join_path(dir, String::from("beans-rs"));
+    dir = join_path(dir, String::from("wings"));
     dir = format_directory_path(dir);
 
     if !dir_exists(dir.clone())
@@ -776,7 +776,7 @@ pub async fn beans_has_update() -> Result<Option<GithubReleaseItem>, BeansError>
 {
     let rs = reqwest::Client::new()
         .get(GITHUB_RELEASES_URL)
-        .header(USER_AGENT, &format!("beans-rs/{}", crate::VERSION))
+        .header(USER_AGENT, &format!("wings/{}", crate::VERSION))
         .send()
         .await;
     let response = match rs
@@ -957,7 +957,7 @@ pub fn backup_gameinfo(ctx: &mut RunnerContext) -> Result<(), BeansError>
 }
 
 const GAMEINFO_BACKUP_DIRNAME: &str = "gameinfo_backup";
-const GITHUB_RELEASES_URL: &str = "https://api.github.com/repositories/805393469/releases/latest";
+const GITHUB_RELEASES_URL: &str = "https://api.github.com/repositories/1086949354/releases/latest";
 
 #[derive(Clone, Debug, serde::Deserialize, serde::Serialize)]
 pub struct GithubReleaseItem
