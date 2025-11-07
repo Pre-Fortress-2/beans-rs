@@ -61,7 +61,7 @@ fn main()
 fn init_console()
 {
     winconsole::window::show(true);
-    if let Err(e) = winconsole::console::set_title(format!("beans v{}", wings::VERSION).as_str())
+    if let Err(e) = winconsole::console::set_title(format!("wings v{}", wings::VERSION).as_str())
     {
         trace!("[init_console] failed to set console title {:#?}", e);
     }
@@ -132,7 +132,7 @@ fn custom_panic_handle(msg: String)
         .replace("\\n", "\n");
 
     wings::gui::DialogBuilder::new()
-        .with_title(String::from("beans - Fatal Error!"))
+        .with_title(String::from("wings - Fatal Error!"))
         .with_icon(DialogIconKind::Error)
         .with_content(txt)
         .run();
@@ -206,7 +206,7 @@ impl Launcher
                 .about("Update your installation")
                 .arg(Launcher::create_location_arg()))
             .subcommand(Command::new("clean-tmp")
-                .about("Clean up temporary files used by beans"))
+                .about("Clean up temporary files used by wings"))
             .subcommand(Command::new("uninstall")
                 .about("Uninstall the target Source Mod.")
                 .args([Launcher::create_location_arg()]))
@@ -592,7 +592,7 @@ impl Launcher
 fn show_msgbox_error(text: String)
 {
     wings::gui::DialogBuilder::new()
-        .with_title(String::from("beans - Fatal Error!"))
+        .with_title(String::from("wings - Fatal Error!"))
         .with_icon(DialogIconKind::Error)
         .with_content(text.replace("\\n", "\n"))
         .run();
