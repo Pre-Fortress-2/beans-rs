@@ -1,11 +1,11 @@
 use log::{debug,
           info};
 
-use crate::{appvar::AppVarData,
+use crate::{BeansError,
+            RunnerContext,
+            appvar::AppVarData,
             butler,
-            helper,
-            BeansError,
-            RunnerContext};
+            helper};
 
 pub struct UpdateWorkflow
 {
@@ -37,7 +37,9 @@ impl UpdateWorkflow
             Some(v) => v,
             None =>
             {
-                println!("[UpdateWorkflow::wizard] No patch is available for the version that is currently installed.");
+                println!(
+                    "[UpdateWorkflow::wizard] No patch is available for the version that is currently installed."
+                );
                 return Ok(());
             }
         };

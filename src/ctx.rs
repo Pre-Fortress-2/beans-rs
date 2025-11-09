@@ -6,17 +6,17 @@ use log::{debug,
           error,
           info};
 
-use crate::{appvar::AppVarData,
+use crate::{BeansError,
+            appvar::AppVarData,
             depends,
             helper,
-            helper::{find_sourcemod_path,
-                     parse_location,
-                     InstallType},
+            helper::{InstallType,
+                     find_sourcemod_path,
+                     parse_location},
             version,
             version::{RemotePatch,
                       RemoteVersion,
-                      RemoteVersionResponse},
-            BeansError};
+                      RemoteVersionResponse}};
 
 #[derive(Debug, Clone)]
 pub struct RunnerContext
