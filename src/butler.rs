@@ -1,5 +1,4 @@
 use std::{backtrace::Backtrace,
-          io::Read,
           process::ExitStatus};
 
 use log::{debug,
