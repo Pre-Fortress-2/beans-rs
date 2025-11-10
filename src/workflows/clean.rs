@@ -2,9 +2,9 @@ use log::{debug,
           info,
           warn};
 
-use crate::{helper,
-            BeansError,
-            RunnerContext};
+use crate::{BeansError,
+            RunnerContext,
+            helper};
 
 #[derive(Debug, Clone)]
 pub struct CleanWorkflow
