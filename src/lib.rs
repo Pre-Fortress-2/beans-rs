@@ -1,6 +1,4 @@
 #![feature(error_generic_member_access)]
-// required for aria2::get_executable_location()
-#![feature(let_chains)]
 // todo
 // https://rust-lang.github.io/rust-clippy/master/index.html#/result_large_err
 #![allow(clippy::result_large_err)]
